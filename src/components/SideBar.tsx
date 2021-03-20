@@ -9,10 +9,14 @@ interface SideBarProps {
     title: string;
   }>, 
   selectedGenreId: number,
-  genreSelected(selectedGenreId: number): void,
+  setSelectedGenreId(selectedGenreId: number): void,
 }
 
 export function SideBar(props: SideBarProps) {
+
+  function handleClickButton(id: number) {
+    props.setSelectedGenreId(id);
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -25,7 +29,7 @@ export function SideBar(props: SideBarProps) {
                   id={String(genre.id)}
                   title={genre.title}
                   iconName={genre.name}
-                  onClick={() => props.genreSelected(genre.id)}
+                  onClick={() => handleClickButton(genre.id)}
                   selected={props.selectedGenreId === genre.id}
                 />
           ))}
