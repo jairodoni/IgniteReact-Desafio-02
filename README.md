@@ -80,7 +80,7 @@ WatchMe é uma aplicação para as pessoas se informarem da qualidade e tempo de
 
 - **[Typescript][typescript]**
 - **[Axios][axios]**
-- **[Styled Components][styled_components]**
+- **[Sass][sass]**
 
 > \* Veja o arquivo <kbd>[package.json](./package.json)</kbd>
 
